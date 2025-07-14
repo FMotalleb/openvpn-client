@@ -402,6 +402,6 @@ else
             sleep 120
         }
     set -x
-    exec sudo -u vpn openvpn --cd $dir --config $conf $ext_args \
+    exec sudo -g vpn openvpn --cd $dir --config $conf $ext_args \
         ${OTHER_ARGS:-} ${MSS:+--fragment $MSS --mssfix}
 fi
